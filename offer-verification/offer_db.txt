@@ -1,0 +1,15 @@
+CREATE DATABASE offer_db;
+USE offer_db;
+
+CREATE TABLE offers (
+    offer_code VARCHAR(255) PRIMARY KEY,
+    company VARCHAR(255),
+    discount VARCHAR(50),
+    expiration_date DATE,
+    is_valid INT
+);
+
+-- Insert some sample offers
+INSERT INTO offers (offer_code, company, discount, expiration_date, is_valid)
+VALUES ('OFFER123', 'XYZ Retail', '20%', '2024-12-31', 1),
+       ('OFFER124', 'ABC Corp', '15%', '2024-12-25', 0);
